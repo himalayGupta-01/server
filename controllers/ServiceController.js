@@ -1,5 +1,5 @@
 import  { Types } from "mongoose";
-import { problemModel, progressModel, studentModel } from "../Database/db.js";
+import { problemModel, progressModel, studentModel } from "../database/db.js";
 
 export default class ServiceController {
   static getStudentProfile = async (req, res) => {

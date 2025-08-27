@@ -3,7 +3,7 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import dotenv from "dotenv"
 import router from "./routes/routes.js";
-import { connectDB } from "./Database/db.js";
+import { connectDB } from "./database/db.js";
 const app=express();
 const PORT= 8000;
 

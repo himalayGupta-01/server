@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
-import { studentModel } from "../Database/db.js";
+import { studentModel } from "../database/db.js";
 
 class AuthController {
   static addStudent = async (req, res) => {
