@@ -38,7 +38,7 @@ class AuthController {
 
       res.cookie("jwtToken", token, {
         expires: new Date(Date.now() + 30*60*100),
-        httpOnly: true,
+        httpOnly: false,
       });
       res.status(201).json(result);
     } catch (err) {
@@ -68,7 +68,7 @@ class AuthController {
 
         res.cookie("jwtToken", token, {
           expires: new Date(Date.now() + 30*60*1000),
-          httpOnly: true,
+          httpOnly: false,
         });
         return res
           .status(200)
@@ -84,7 +84,7 @@ class AuthController {
   static logout = async (req, res) => {
     try {
       res.cookie("jwtToken", "", {
-        httpOnly: true,
+        httpOnly: false,
         expires: new Date(0),
       });
       return res.status(200).json({ error: "Log Out Successfully" });
